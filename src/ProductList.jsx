@@ -81,7 +81,7 @@ function ProductList() {
               <h2>{category.category}</h2>
               <div className="plant-grid">
                 {category.plants.map((plant) => (
-                         <ProductCard key={plant.name} plant={plant} />
+                  <ProductCard key={plant.name} plant={plant} />
                 ))}
               </div>
             </div>
@@ -92,3 +92,6 @@ function ProductList() {
       )}
     </div>
   );
+}
+
+export default ProductList;

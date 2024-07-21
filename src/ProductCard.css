@@ -1,0 +1,59 @@
+/* Product Card */
+.product-card {
+    margin-top: 100px;
+    flex: 0 0 auto; /* Allow cards to maintain their size */
+    width: calc(20% - 16px); /* Adjust percentage to fit more or fewer cards per row */
+    height: auto; /* Allow height to adjust based on content */
+    border: 1px solid #ddd;
+    margin: 10px; /* Space between cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Hide anything outside the card */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Padding for content */
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out; /* Smooth transform transition */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Slightly zoom on hover */
+    z-index: 1; /* Ensure card stays on top */
+}
+
+/* Button Styling */
+.add-to-cart-button {
+    background-color: #28a745; /* Green background for the button */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and scale */
+    margin-top: 10px; /* Space above the button */
+}
+
+.add-to-cart-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.add-to-cart-button:disabled {
+    background-color: #6c757d; /* Gray background for disabled state */
+    cursor: not-allowed; /* Change cursor to indicate disabled state */
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 16px); /* 2 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: calc(100% - 16px); /* 1 card per row on very small screens */
+    }
+}
